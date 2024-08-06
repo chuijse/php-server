@@ -1,0 +1,13 @@
+services:
+  web:
+    image: php:8.1-apache
+    container_name: php-apache
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "8080:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
